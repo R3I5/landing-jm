@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Nunito:wght@700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Tipografia */
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Nunito", sans-serif;
+
+  /* Identidade principal */
+  --color-brand-50: #f6f2fa;
+  --color-brand-100: #ede5f6;
+  --color-brand-200: #dcccf0;
+  --color-brand-300: #c2a7e3;
+  --color-brand-400: #9b78cc;
+  --color-brand-500: #7453a6;
+  --color-brand-600: #62438f;
+  --color-brand-700: #49306f;
+  --color-brand-800: #382455;
+  --color-brand-900: #271a3b;
+
+  /* Superfícies e textos */
+  --color-surface: #fffcf8;
+  --color-surface-alt: #f7f3ee;
+  --color-ink: #27232b;
+  --color-muted: #68616d;
+
+/* Categorias da loja */
+--color-pet: #e97872;
+--color-craft: #e9c94e;
+--color-stationery: #e9c94e;
+--color-renovation: #55a9d6;
+--color-tools: #e99754;
+--color-housewares: #67b96f;
+--color-gifts: #d879c7;
+
+  /* Sombras */
+  --shadow-soft: 0 18px 50px rgb(73 48 111 / 0.1);
+  --shadow-card: 0 10px 30px rgb(39 35 43 / 0.08);
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-surface);
+  overflow-x: hidden;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  color: white;
+  background: var(--color-brand-500);
+}
+
+.editorial-dot-pattern {
+  background-image: radial-gradient(
+    circle,
+    var(--color-brand-700) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 14px 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
